@@ -29,10 +29,10 @@
 					var components = <components></components>;
 					for each (var a in results.a) {
 						var symbol = a.text().toString().replace(/\s+/g, "");
-						components.appendChild(<component>{symbol}</component>);
+						components.appendChild(<component>{results}</component>);
 					}
 					
-					response.object = results;
+					response.object = components;
 				]]>
 			</execute>
 		</select>
