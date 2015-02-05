@@ -34,13 +34,13 @@
 					for each (var a in results.a) {
 						var symbol = a.text().toString().replace(/\s+/g, "");
 						var symbola = a.text();
-						components.appendChild(<component>{symbola}</component>);
+						components.appendChild(<component>{symbol}</component>);
 					}
 					
 					var results = compQuery2.results;
 					for each (var b in results.b) {
-						var symbol2 = a.text().toString().replace(/\s+/g, "");
-						var symbola2 = a.text();
+						var symbol2 = b.text().toString().replace(/\s+/g, "");
+						var symbola2 = b.text();
 						
 					}					
 					
