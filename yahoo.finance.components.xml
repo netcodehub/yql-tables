@@ -25,8 +25,10 @@
 							"xpath='//a[starts-with(@href, \"/q?s=\") and parent::b]'",
 							{url:url});
 							
+					var url2 = "https://finance.yahoo.com/q/cp?s=" + symbol +
+							"+Components&c=" + page;	
 					var compQuery2 = y.query("select content from html " +
-						"where url=@url and compat='html5' and " + "xpath='//span[starts-with(@id,\"yfs_p43_\")]/*/text()'");
+						"where url2=@url and compat='html5' and " + "xpath='//span[starts-with(@id,\"yfs_p43_\")]/*/text()'");
 					
 					var results = compQuery.results;
 					var components = <components></components>;
