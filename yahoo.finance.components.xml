@@ -26,8 +26,7 @@
 							{url:url});
 							
 					var compQuery2 = y.query("select content from html " +
-							"where url=@url and compat='html5' and " +
-							xpath='//span[starts-with(@id,\"yfs_p43_\")]/*/text()'");
+							"where xpath='//span[starts-with(@id,\"yfs_p43_\")]/*/text()'");
 					
 					var results = compQuery.results;
 					var components = <components></components>;
