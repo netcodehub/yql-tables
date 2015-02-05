@@ -32,7 +32,7 @@
 						components.appendChild(<component>{symbol}</component>);
 					}
 					
-					response.object = a;
+					response.object = results;
 				]]>
 			</execute>
 		</select>
