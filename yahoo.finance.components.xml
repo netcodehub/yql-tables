@@ -41,7 +41,7 @@
 					for each (var b in results.b) {
 						var symbol2 = a.text().toString().replace(/\s+/g, "");
 						var symbola2 = a.text();
-						components.appendChild(<component>{symbola2}</component>);
+						
 					}					
 					
 					
