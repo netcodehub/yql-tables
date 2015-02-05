@@ -22,8 +22,11 @@ var url = "https://finance.yahoo.com/q/cp?s=" + symbol +
 							"+Components&c=" + page;
 					var compQuery = y.query("select content from html " +
 							"where url=@url and compat='html5' and " +
-							"xpath='//a[starts-with(@href, \"/q?s=\") and parent::b]'",
+							"xpath='//table[@width=\"100%\"]/tbody/tr/td/table[@width=\"100%\"]/tbody//tr[1]'",
 							{url:url});
+					
+
+					
 					
 					var results = compQuery.results;
 					var components = <components></components>;
