@@ -22,16 +22,29 @@
 							"+Components&c=" + page;
 					var compQuery = y.query("select content from html " +
 							"where url=@url and compat='html5' and " +
-							"xpath='//a[starts-with(@href, \"/q?s=\")'",
+							"xpath='//a[starts-with(@href, \"/q?s=\") and parent::b]' and " + "xpath='//span[starts-with(@id,\"yfs_p43_\")]/*/text()[last()]'",
+							{url:url});
+							
+					var compQuery2 = y.query("select content from html " +
+							"where url=@url and compat='html5' and " +
+							xpath='//span[starts-with(@id,\"yfs_p43_\")]/*/text()[last()]'",
 							{url:url});
 					
 					var results = compQuery.results;
 					var components = <components></components>;
 					for each (var a in results.a) {
 						var symbol = a.text().toString().replace(/\s+/g, "");
-						var symbola = a.text()
+						var symbola = a.text();
 						components.appendChild(<component>{symbola}</component>);
 					}
+					
+					var results = compQuery2.results;
+					for each (var b in results.b) {
+						var symbol2 = a.text().toString().replace(/\s+/g, "");
+						var symbola2 = a.text();
+						components.appendChild(<component>{symbola2}</component>);
+					}					
+					
 					
 					response.object = components;
 				]]>
