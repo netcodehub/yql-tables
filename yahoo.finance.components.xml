@@ -22,7 +22,7 @@
 							"+Components&c=" + page;
 					var compQuery = y.query("select content from html " +
 							"where url=@url and compat='html5' and " +
-							"xpath='//a[starts-with(@href, \"/q?s=\")]/ancestor::tr[1]'",
+							"xpath='//a[starts-with(@href, \"/q?s=\")]/ancestor::b'",
 							{url:url});
 					
 					var results = compQuery.results;
