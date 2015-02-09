@@ -28,7 +28,7 @@
 					var results = compQuery.results;
 					var components = <components></components>;
 					for each (var a in results.a) {
-						var symbol = a.text();
+						var symbol = a;
 						components.appendChild(<component>{symbol}</component>);
 					}
 					
