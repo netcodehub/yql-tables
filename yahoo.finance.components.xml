@@ -22,8 +22,7 @@
 							"+Components&c=" + page;
 					var compQuery = y.query("select content from html " +
 							"where url=@url and compat='html5' and " +
-							"xpath='//a[starts-with(@href, \"/q?s=\")]/../../..'",
-							{url:url});
+							"xpath='//a[starts-with(@href, \"/q?s=\")]/../../..'");
 					
 					var results = compQuery.results;
 					var components = <components></components>;
