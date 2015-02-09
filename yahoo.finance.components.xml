@@ -29,7 +29,7 @@
 					var components = <components></components>;
 					for each (var a in results.a) {
 						var symbol = a.html();
-						components.appendChild(<component>{a}</component>);
+						components.appendChild(<component>{results.a}</component>);
 					}
 					
 					response.object = components;
