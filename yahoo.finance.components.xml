@@ -28,8 +28,8 @@
 					var results = compQuery.results;
 					var components = <components></components>;
 					for each (var a in results.a) {
-						var symbol = a.html();
-						components.appendChild(<component>{results.a}</component>);
+						var symbol = a;
+						components.appendChild(<component>{symbol}</component>);
 					}
 					
 					response.object = components;
